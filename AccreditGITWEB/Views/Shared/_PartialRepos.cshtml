@@ -1,0 +1,23 @@
+﻿@using System.Collections.Generic
+@using AccreditGITWEB.Models
+@model List<Repo>
+
+
+@if (Model != null)
+{
+
+    foreach (Repo repo in Model)
+    {
+        <div class="card w-50 mt-1">
+            <div class="card-body">
+                <h5 class="card-title">@repo.name</h5>
+                <p class="card-text">@repo.description</p>
+                <p class="card-text">Star Count: @repo.stargazers_count</p>
+            </div>
+        </div>
+    } 
+}
+else
+{
+    <p>Repository not found!!</p>
+}

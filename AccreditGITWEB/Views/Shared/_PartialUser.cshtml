@@ -1,0 +1,23 @@
+﻿@model AccreditGITWEB.Models.User
+
+@if (Model != null)
+{
+    <input type="hidden" id="hdnrepo" value="@Model.repos_url" />
+    <table>
+        <tr>
+            <td>
+                User Name: @Model.name
+            </td>
+            <td rowspan="2"><img width="75px" src="@Model.avatar_url" /></td>
+        </tr>
+        <tr>
+            <td>
+                Location: @Model.location
+            </td>
+        </tr>
+    </table>
+}
+else
+{
+<p>User not found!!</p>
+}   
